@@ -66,8 +66,9 @@ public class MainActivity extends AppCompatActivity
 			if (activity != null) {
 				if (msg.what == LOADING_FINISH) {
 					loadingDialog.dismiss();
-					activity.startActivity(new Intent(activity,
-							TestingActivity.class));
+					Intent intent = new Intent(activity, TestingActivity.class);
+					intent.putExtra("dataResult", "" + msg.obj);
+					activity.startActivity(intent);
 				}
 			}
 		}
@@ -133,6 +134,7 @@ public class MainActivity extends AppCompatActivity
 			if (dataResult != null) {
 				Message message = Message.obtain();
 				message.what = LOADING_FINISH;
+				message.obj = dataResult;
 				mHandler.sendMessage(message);
 			}
 		}
@@ -179,10 +181,8 @@ public class MainActivity extends AppCompatActivity
 	@Override
 	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 		if (isChecked) {
-			Log.d("tag", "order");
 			chooseType = "order";
 		} else {
-			Log.d("tag", "rand");
 			chooseType = "rand";
 		}
 	}
