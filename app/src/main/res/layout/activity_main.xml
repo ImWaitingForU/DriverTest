@@ -1,0 +1,172 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".activity.MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_subject"
+            android:textColor="@color/colorButton"/>
+
+        <RadioGroup
+            android:id="@+id/rg_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_subject1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/radio_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/button1_main"
+                android:theme="@style/Base.Widget.AppCompat.Button"/>
+
+            <RadioButton
+                android:id="@+id/rb_subject4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/radio_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/button4_main"
+                android:theme="@style/Base.Widget.AppCompat.Button"/>
+
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/text_model"
+            android:textColor="@color/colorButton"/>
+
+        <RadioGroup
+            android:id="@+id/rg_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_model1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_circle_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/rb_model1"/>
+
+            <RadioButton
+                android:id="@+id/rb_model2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_circle_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/rb_model2"/>
+
+            <RadioButton
+                android:id="@+id/rb_model3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_circle_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/rb_model3"/>
+
+            <RadioButton
+                android:id="@+id/rb_model4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_circle_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/rb_model4"/>
+
+            <RadioButton
+                android:id="@+id/rb_model5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_circle_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/rb_model5"/>
+
+            <RadioButton
+                android:id="@+id/rb_model6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_circle_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/rb_model6"/>
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/text_type"
+            android:textColor="@color/colorButton"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_type1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_type1"
+                android:textColor="@color/colorButton"
+                android:textSize="18sp"/>
+
+            <Switch
+                android:id="@+id/type_switcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:thumb="@drawable/switcher_thumb"/>
+
+            <TextView
+                android:id="@+id/tv_type2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_type2"
+                android:textColor="@color/colorButton"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_start_selector"
+        android:text="@string/button_start"/>
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">不知道叫什么的驾考APP</string>
+
+    <!--主界面Button-->
+    <string name="button1_main">科目1</string>
+    <string name="button2_main">科目2</string>
+    <string name="button3_main">科目3</string>
+    <string name="button4_main">科目4</string>
+    <string name="text_subject">选择科目</string>
+    <string name="text_model">驾照类型</string>
+    <string name="text_type">考试类型</string>
+    <string name="button_start">开始测试！</string>
+
+    <string name="rb_model1">C1</string>
+    <string name="rb_model2">C2</string>
+    <string name="rb_model3">A1</string>
+    <string name="rb_model4">A2</string>
+    <string name="rb_model5">B1</string>
+    <string name="rb_model6">B2</string>
+
+
+    <string name="text_type1">随机测试</string>
+    <string name="text_type2">顺序测试</string>
+
+</resources>
