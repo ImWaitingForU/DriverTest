@@ -11,8 +11,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.iwfu.drivertest.R;
+import com.iwfu.drivertest.bean.QuestionBean;
 
 import java.lang.ref.WeakReference;
+import java.util.List;
 
 /**
  * Created by Iwfu on 2016/11/12 0012.
@@ -79,11 +81,13 @@ public class TestingTopBar extends FrameLayout {
 	/**
 	 * 设置进度
 	 *
-	 * @param progress
-	 *            String 表示的进度
+	 * @param currentIndex
+	 *            当前题号
+	 * @param list
+	 *            题目集合
 	 */
-	public void setProgress(String progress) {
-		tvProgress.setText("进度\n" + progress);
+	public void setProgress(int currentIndex, List<QuestionBean> list) {
+		tvProgress.setText("进度\n" + (currentIndex + 1) / list.size());
 	}
 
 	/**

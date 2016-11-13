@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/iv_test"
+        android:id="@+id/ivPic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -17,17 +17,15 @@
         android:id="@+id/tvId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/iv_test"
-        android:text="25."
+        android:layout_below="@id/ivPic"
         android:textSize="16sp"/>
 
     <TextView
         android:id="@+id/tvQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/iv_test"
+        android:layout_below="@id/ivPic"
         android:layout_toRightOf="@id/tvId"
-        android:text="这个标志是何含义？"
         android:textSize="18sp"/>
 
     <RadioGroup
@@ -39,39 +37,47 @@
         android:padding="10dp">
 
         <RadioButton
+            android:textSize="16sp"
             android:id="@+id/rbItem1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:button="@null"
-            android:text="A  休息区"/>
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:button="@null"/>
 
         <RadioButton
+            android:textSize="16sp"
             android:id="@+id/rbItem2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:button="@null"
-            android:text="B  休息区"/>
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:button="@null"/>
 
         <RadioButton
+            android:textSize="16sp"
             android:id="@+id/rbItem3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:button="@null"
-            android:text="C  休息区"/>
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:button="@null"/>
 
         <RadioButton
+            android:textSize="16sp"
             android:id="@+id/rbItem4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:button="@null"
-            android:text="D  休息区"/>
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:button="@null"/>
     </RadioGroup>
 
     <TextView
+        android:id="@+id/tvAnswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/rgItems"
-        android:layout_marginTop="30dp"
-        android:text="这里是解析:asdsdaiojfladsj"/>
+        android:layout_marginTop="30dp"/>
 
 </RelativeLayout>

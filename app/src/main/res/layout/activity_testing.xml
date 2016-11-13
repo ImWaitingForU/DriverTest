@@ -9,9 +9,13 @@
     <com.iwfu.drivertest.views.TestingTopBar
         android:id="@+id/testingTopBar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_height="?attr/actionBarSize"/>
 
-    </com.iwfu.drivertest.views.TestingTopBar>
-
+    <include
+        android:id="@+id/test_layout"
+        layout="@layout/testing_question_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/testingTopBar"/>
 
 </RelativeLayout>
