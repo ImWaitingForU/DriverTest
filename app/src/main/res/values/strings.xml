@@ -10,6 +10,7 @@
     <string name="text_model">驾照类型</string>
     <string name="text_type">考试类型</string>
     <string name="button_start">开始测试！</string>
+    <string name="button_next">下一题</string>
 
     <string name="rb_model1">C1</string>
     <string name="rb_model2">C2</string>

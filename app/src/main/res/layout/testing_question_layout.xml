@@ -6,21 +6,23 @@
 
     <ImageView
         android:id="@+id/ivPic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="196dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
         android:src="@drawable/loading_failed"/>
 
     <TextView
+        android:layout_marginTop="20dp"
         android:id="@+id/tvId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/ivPic"
+        android:layout_marginLeft="10dp"
         android:textSize="16sp"/>
 
     <TextView
+        android:layout_marginTop="20dp"
         android:id="@+id/tvQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,50 +30,50 @@
         android:layout_toRightOf="@id/tvId"
         android:textSize="18sp"/>
 
-    <RadioGroup
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
         android:id="@+id/rgItems"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvId"
+        android:layout_below="@id/tvQuestion"
         android:orientation="vertical"
         android:padding="10dp">
 
-        <RadioButton
-            android:textSize="16sp"
-            android:id="@+id/rbItem1"
+        <TextView
+            android:id="@+id/tvItem1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:button="@null"/>
+            android:textSize="18sp"/>
 
-        <RadioButton
-            android:textSize="16sp"
-            android:id="@+id/rbItem2"
+        <TextView
+            android:id="@+id/tvItem2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:button="@null"/>
+            android:textSize="18sp"/>
 
-        <RadioButton
-            android:textSize="16sp"
-            android:id="@+id/rbItem3"
+        <TextView
+            android:id="@+id/tvItem3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:button="@null"/>
+            android:textSize="18sp"/>
 
-        <RadioButton
-            android:textSize="16sp"
-            android:id="@+id/rbItem4"
+        <TextView
+            android:id="@+id/tvItem4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:button="@null"/>
-    </RadioGroup>
+            android:textSize="18sp"/>
+
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvAnswer"

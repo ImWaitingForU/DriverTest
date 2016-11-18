@@ -15,7 +15,16 @@
         android:id="@+id/test_layout"
         layout="@layout/testing_question_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/testingTopBar"/>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_start_selector"
+        android:text="@string/button_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>

@@ -19,6 +19,16 @@ public class QuestionBean implements Serializable {
 	private String explains;
 	private String url;
 
+	private String chooseAnswer = null; // 选错了的答案，没有则为空
+
+	public String getChooseAnswer() {
+		return chooseAnswer;
+	}
+
+	public void setChooseAnswer(String chooseAnswer) {
+		this.chooseAnswer = chooseAnswer;
+	}
+
 	public int getId() {
 		return id;
 	}

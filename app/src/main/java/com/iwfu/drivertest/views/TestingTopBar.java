@@ -1,9 +1,8 @@
 package com.iwfu.drivertest.views;
 
 import android.content.Context;
-import android.os.Handler;
-import android.os.Message;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -13,7 +12,6 @@ import android.widget.TextView;
 import com.iwfu.drivertest.R;
 import com.iwfu.drivertest.bean.QuestionBean;
 
-import java.lang.ref.WeakReference;
 import java.util.List;
 
 /**
@@ -24,25 +22,8 @@ import java.util.List;
 public class TestingTopBar extends FrameLayout {
 
 	private ImageView ivQuit;
-	private TextView tvTime;
 	private TextView tvProgress;
-
-	private MyHandler handler;
-	private class MyHandler extends Handler {
-
-		WeakReference<Context> mReference;
-
-		public MyHandler(Context context) {
-			mReference = new WeakReference<>(context);
-		}
-
-		@Override
-		public void handleMessage(Message msg) {
-			if (mReference != null) {
-
-			}
-		}
-	}
+	private ImageView ivLastQuestion;
 
 	public TestingTopBar(Context context) {
 		super(context);
@@ -54,28 +35,34 @@ public class TestingTopBar extends FrameLayout {
 		View view = LayoutInflater.from(context).inflate(
 				R.layout.testing_top_bar, this, true);
 
-		tvTime = (TextView) view.findViewById(R.id.tv_ttb_time);
 		tvProgress = (TextView) view.findViewById(R.id.tv_ttb_progress);
 		ivQuit = (ImageView) view.findViewById(R.id.iv_ttb_quit);
+		ivLastQuestion = (ImageView) view.findViewById (R.id.iv_lastQuestion);
 
-		handler = new MyHandler(context);
-	}
-
-	/**
-	 * 开启倒计时
-	 */
-	public void startCountDown() {
 
 	}
+	public TextView getTvProgress() {
+		return tvProgress;
+	}
 
-	/**
-	 * 设置时间
-	 *
-	 * @param time
-	 *            String表示的时间
-	 */
-	public void setTime(String time) {
-		tvTime.setText(time);
+	public void setTvProgress(TextView tvProgress) {
+		this.tvProgress = tvProgress;
+	}
+
+	public ImageView getIvQuit() {
+		return ivQuit;
+	}
+
+	public void setIvQuit(ImageView ivQuit) {
+		this.ivQuit = ivQuit;
+	}
+
+	public ImageView getIvLastQuestion() {
+		return ivLastQuestion;
+	}
+
+	public void setIvLastQuestion(ImageView ivLastQuestion) {
+		this.ivLastQuestion = ivLastQuestion;
 	}
 
 	/**
@@ -87,13 +74,7 @@ public class TestingTopBar extends FrameLayout {
 	 *            题目集合
 	 */
 	public void setProgress(int currentIndex, List<QuestionBean> list) {
-		tvProgress.setText("进度\n" + (currentIndex + 1) / list.size());
+		tvProgress.setText("进度\n" + (currentIndex + 1) +"/"+list.size());
 	}
 
-	/**
-	 * 设置点击结束按钮
-	 */
-	public void setOnQuitButtonPressed(OnClickListener listener) {
-		ivQuit.setOnClickListener(listener);
-	}
 }
